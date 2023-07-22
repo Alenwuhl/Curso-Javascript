@@ -1,0 +1,104 @@
+/*FORMATO MOBILE*/
+@media (max-width: 768px){
+    header, main, footer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* TITULO "BEAR" */
+    .titulo{
+      color: rgb(133, 64, 14);
+      font-size: 60px;
+      font-family: $fuenteTitulo;
+      text-align: center;
+      margin: 20px;
+    }
+    /* LOGO BEAR*/
+    img.mediana{
+      width: 50px;
+      height: 50px;
+    }
+    /*TITULO SECUNDARIO*/
+    h1{
+      color: black;
+      font-size: 40px;
+      font-family: $fuenteTitulo;
+      text-align: center;
+    }
+    /*NAV*/
+    .buscador{
+      font-size: 25px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: center;
+    }
+    /*LISTA*/
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      list-style: none;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+     }
+    /*FOTOS INDEX*/
+    #fotoIndex{
+      width: 100%;
+      height: auto;
+      padding: 10px;
+    }
+    /*QUIENES SOMOS*/
+    .gridQs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .imagenes4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    /*PARRAFOS*/
+    .parrafo{
+      color: $colorNegro;
+      font-size: 20px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      text-align: justify;
+      padding: 10px;
+      margin-block-start: 0.5em;
+    }
+    .mainProductos{
+      padding: 20px;
+    }
+    .productos{
+      width: 100%;
+    }
+    .mainContacto{
+      padding: 20px;
+    }
+    .contacto{
+      width: 100%;
+    }
+    .mainPreguntas{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      padding: 20px;
+    }
+      .carousel-item:nth-child(1) img {
+        content: url(../img-2/Y7D_1972-31.jpg);
+      }
+      .carousel-item:nth-child(2) img {
+        content: url(../img/IMG_7891.JPG);
+      }
+      .carousel-item:nth-child(3) img {
+        content: url(../img-2/Y7D_1923-14.jpg);
+      }   
+      .indexDesktop {
+        visibility: hidden;
+        display: none;
+      }
+    }
