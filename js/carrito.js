@@ -43,7 +43,7 @@ function cargarProductosCarrito() {
                     <p>$${prenda.precio * prenda.cantidad}</p>
                 </div>
                 <button class="carrito-producto-eliminar" id="${prenda.id}"><i class="bi bi-trash-fill"></i></button>
-            `;
+            `
     
             contenedorCarritoProductos.append(div)
         })
@@ -62,16 +62,35 @@ function cargarProductosCarrito() {
 
 function actualizarBotonesEliminar() {
     let botonesEliminar = document.querySelectorAll(".carrito-producto-eliminar")
-
+    let indexAux = 0
     botonesEliminar.forEach(boton => {
-        boton.addEventListener("click", eliminarDelCarrito)
-    });
+        indexAux = carrito.findIndex(prenda => prenda.id === parseInt(boton.id))
+        boton.addEventListener("click", () => {Swal.fire({
+            title: '¿Quieres eliminar el producto: ' + carrito[carrito.findIndex(prenda => prenda.id === parseInt(boton.id))].nombre  + '?',
+            imageUrl: "../img/Daisy_Flower_Y2K_Icon_Instagram_Profile_Picture-removebg-preview (1).png",
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, borralo!',
+            cancelButtonText: "Cancelar"
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Eliminado!',
+                'Tu producto ha sido eliminado',
+                'success'
+              )
+              eliminarDelCarrito(boton.id)
+            }
+          })})
+        
+    })
 }
 
-function eliminarDelCarrito(e) {
-    const idBoton = e.currentTarget.id;
+function eliminarDelCarrito(idBoton) {
+    /*const idBoton = e.currentTarget.id;*/
     const index = carrito.findIndex(prenda => prenda.id === parseInt(idBoton))
-    
+
     if (carrito[index].cantidad > 1) {
         carrito[index].cantidad -= 1
     } else{

@@ -1,45 +1,7 @@
 // Defino los Arrays
-const prendas = [
-    {id: 1, nombre: "Teddy", precio: 2990, descripcion: "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.", archivoImagen: "../img/fotoTeddy.jpg", cantidad: 0,
-                             talles:[{talleId: "XL", colores:[{colorId:"BL", colorNombre:"Blanco", stock:10},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:5}]},
-                                     {talleId: "L",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:3},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:25}]},
-                                     {talleId: "M",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:18},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:13},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:225}]},
-                                     {talleId: "S",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:1},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:15}]}]
-    },
-    {id: 2, nombre: "Buzo Jogging", precio: 3800, descripcion: "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.",archivoImagen: "../img-2/fotoBuzo.jpg", cantidad: 0,
-                             talles:[{talleId: "XL", colores:[{colorId:"BL", colorNombre:"Blanco", stock:10},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:5}]},
-                                     {talleId: "L",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:3},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:25}]},
-                                     {talleId: "M",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:18},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:13},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:225}]},
-                                     {talleId: "S",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                              {colorId:"NE", colorNombre:"Negro", stock:1},
-                                                              {colorId:"RO", colorNombre:"Rojo", stock:15}]}]
-    },                                                            
-    {id: 3, nombre: "Remera", precio: 1900, descripcion: "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.",archivoImagen: "../img-3/fotoRemeraXL.jpg", cantidad: 0,
-                            talles:[{talleId: "XL", colores:[{colorId:"BL", colorNombre:"Blanco", stock:10},
-                                                            {colorId:"NE", colorNombre:"Negro", stock:5}]},
-                                    {talleId: "L",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                            {colorId:"NE", colorNombre:"Negro", stock:3},
-                                                            {colorId:"RO", colorNombre:"Rojo", stock:25}]},
-                                    {talleId: "M",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:18},
-                                                            {colorId:"NE", colorNombre:"Negro", stock:13},
-                                                            {colorId:"RO", colorNombre:"Rojo", stock:225}]},
-                                    {talleId: "S",  colores:[{colorId:"BL", colorNombre:"Blanco", stock:8},
-                                                            {colorId:"NE", colorNombre:"Negro", stock:1},
-                                                            {colorId:"RO", colorNombre:"Rojo", stock:15}]}]
-    }
-]
+const prendas = []
+
+const URLPrendas= "../js/prendas.json"
 
 class Prenda {
   constructor(id, nombre, precio, talles, descripcion, archivoImagen) {
@@ -83,16 +45,49 @@ const prendasClase = prendas.map(prenda => {
   });
 let carrito = []
 
-cargarProductos();
+//cargarProductos();
 
-const botonesComprar = document.querySelectorAll(".agregarPrenda")
+obtenerPrendas()
 
-botonesComprar.forEach(boton => boton.addEventListener("click", () => {
-  agregarAlCarrito(boton)
-}))
+setTimeout(()=> {
+  
+  agregarListener()
 
+},500)
+
+function agregarListener(){
+  console.log('queryselector')
+  const botonesComprar = document.querySelectorAll(".agregarPrenda")
+
+  botonesComprar.forEach(boton => boton.addEventListener("click", () => {
+    Toastify({
+      text: "Se agregó a tu carrito",
+      avatar: "../img/icons8-teddy-bear-96.png",
+      duration: 3000,
+      destination: "../pages/carrito.html",
+      newWindow: true,
+      close: true,
+      gravity: "top", 
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: "rgb(206, 161, 103)" ,
+      },
+      onClick: function(){}
+    }).showToast();
+    agregarAlCarrito(boton)
+  }))
+}
+
+function obtenerPrendas() {
+  fetch(URLPrendas)
+  .then((response)=> response.json())
+  .then((data)=> prendas.push(...data))
+  .then(()=> cargarProductos())
+  .then(()=> console.log('obtenerPrendas'))
+  .catch((error)=> console.log("Hemos detectado un problema, vuelve a intentarlo más tarde."))
+}
 const numerito = document.querySelector("#numeroCarrito")
-
 
 function retornarCard(prenda) {
 

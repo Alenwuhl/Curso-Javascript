@@ -1,0 +1,257 @@
+[
+  {
+    "id": 1,
+    "nombre": "Teddy",
+    "precio": 2990,
+    "descripcion": "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.",
+    "archivoImagen": "../img/fotoTeddy.jpg",
+    "cantidad": 0,
+    "talles": [
+      {
+        "talleId": "XL",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 10
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "talleId": "L",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 3
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 25
+          }
+        ]
+      },
+      {
+        "talleId": "M",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 18
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 13
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 225
+          }
+        ]
+      },
+      {
+        "talleId": "S",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 1
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Buzo Jogging",
+    "precio": 3800,
+    "descripcion": "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.",
+    "archivoImagen": "../img-2/fotoBuzo.jpg",
+    "cantidad": 0,
+    "talles": [
+      {
+        "talleId": "XL",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 10
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "talleId": "L",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 3
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 25
+          }
+        ]
+      },
+      {
+        "talleId": "M",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 18
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 13
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 225
+          }
+        ]
+      },
+      {
+        "talleId": "S",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 1
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Remera",
+    "precio": 1900,
+    "descripcion": "Estás buscando un buzo suave y calentito? Esta es tu mejor opción.",
+    "archivoImagen": "../img-3/fotoRemeraXL.jpg",
+    "cantidad": 0,
+    "talles": [
+      {
+        "talleId": "XL",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 10
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 5
+          }
+        ]
+      },
+      {
+        "talleId": "L",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 3
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 25
+          }
+        ]
+      },
+      {
+        "talleId": "M",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 18
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 13
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 225
+          }
+        ]
+      },
+      {
+        "talleId": "S",
+        "colores": [
+          {
+            "colorId": "BL",
+            "colorNombre": "Blanco",
+            "stock": 8
+          },
+          {
+            "colorId": "NE",
+            "colorNombre": "Negro",
+            "stock": 1
+          },
+          {
+            "colorId": "RO",
+            "colorNombre": "Rojo",
+            "stock": 15
+          }
+        ]
+      }
+    ]
+  }
+]

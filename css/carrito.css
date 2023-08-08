@@ -18,7 +18,10 @@
 .carrito-productos {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 1rem;
+    margin: 10px;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .carrito-producto {
@@ -56,25 +59,47 @@
 
 .carrito-acciones-total {
     margin: 20px;
-    justify-content: center;
+    padding: 10px 20px;
     display: flex;
-    background-color:rgb(206, 161, 103);
+    background: linear-gradient(45deg, rgb(206, 161, 103), rgb(186, 141, 83));
+    border: 2px solid rgb(186, 141, 83);
     text-transform: uppercase;
-}
-.carrito-acciones-total {
-    padding: 1rem;
+    cursor: pointer;
     border-radius: 1rem;
-    gap: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    color: white;
+}
+
+.carrito-acciones-comprar:hover {
+    background: linear-gradient(45deg, rgb(186, 141, 83), rgb(206, 161, 103));
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 .carrito-acciones-comprar {
     margin: 20px;
-    background-color:rgb(206, 161, 103);
-    border: 0;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, rgb(206, 161, 103), rgb(186, 141, 83));
+    border: 2px solid rgb(186, 141, 83);
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    color: white;
 }
+
+.carrito-acciones-comprar:hover {
+    background: linear-gradient(45deg, rgb(186, 141, 83), rgb(206, 161, 103));
+    transform: translateY(-2px);
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 
 .header-mobile {
     display: none;
@@ -108,8 +133,28 @@
 .carrito-acciones-derecha {
     display: flex;
 }
+.carrito-producto-titulo {
+    max-width: 30px;
+}
 
-
+.boton-carrito {
+    margin: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(45deg, rgb(206, 161, 103), rgb(186, 141, 83));
+    border: 2px solid rgb(186, 141, 83);
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+    color: white;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
 
 
 
